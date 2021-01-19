@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    # if you already created a post you do not need to check if it is valid. 
     if @post.update(post_params)
        redirect_to post_path(@post)
     else 
